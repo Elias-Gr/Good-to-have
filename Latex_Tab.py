@@ -4,10 +4,10 @@ Vektor_U = np.round(np.random.rand(10), 4)   # Array of data in column 1
 Vektor_I = np.round(np.random.rand(10), 4)
 Vektor_P = np.round(Vektor_U * Vektor_I, 4)
 
-quantities = ['U', 'I', 'P']  # strings of physical quantities
-units = ['V', 'A', 'W']
-explanation = ['Voltage drop at resistor', 'Current flow through the resistor', 'Power used by the resistor']
-Data_for_table = [Vektor_U, Vektor_I, Vektor_P]
+quantities = ['U', 'I', 'P']    # strings of physical quantities
+units = ['V', 'A', 'W']         # strings of corresponding units
+explanation = ['Voltage drop at resistor', 'Current flow through the resistor', 'Power used by the resistor'] # labeling of the quantities
+Data_for_table = [Vektor_U, Vektor_I, Vektor_P] # put the Data in a list
 
 
 def listofemptystrings(n):
@@ -56,7 +56,7 @@ def LaTeX_tab(quantities, units, Data, Name):    # use this function to create a
 
     Lines_end = ['\end{tabular}', '\end{minipage}', '\end{table}']
 
-    with open(Name + '.txt', 'w') as f:
+    with open(Name + '.txt', 'w') as f:     # creates the .txt file
         writinglines(Lines_start, f)
         writinglines(Lines_header, f)
         writinglines(Lines_middle, f)
