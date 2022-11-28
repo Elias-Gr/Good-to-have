@@ -23,7 +23,7 @@ def writinglines(lines, f):
         f.write('\n')
 
 
-def LaTeX_tab(quantities, Data, Name):    # use this function to create a .txt file with the table
+def LaTeX_tab(quantities, units, Data, Name):    # use this function to create a .txt file with the table
     n_columns = len(explanation)
     n_rows = len(Data[0])
     Lines_header = listofemptystrings(n_columns)
@@ -67,4 +67,4 @@ def LaTeX_tab(quantities, Data, Name):    # use this function to create a .txt f
         writinglines(Lines_end, f)
 
 
-LaTeX_tab(quantities, Data_for_table, 'LaTeX_Table_from_Python')
+LaTeX_tab(quantities, units, Data_for_table, 'LaTeX_Table_from_Python')
